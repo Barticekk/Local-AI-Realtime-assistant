@@ -16,7 +16,7 @@ workflows:
         - certificate_credentials
       vars:
         BUNDLE_ID: "com.barticekk.localairealtimeassistant.companion"
-        APP_STORE_APP_ID: "REPLACE_WITH_APP_STORE_APP_ID"  # App Store Connect > App > General > App Information
+        APP_STORE_APP_ID: 1234567890  # REPLACE_WITH_ACTUAL_APP_ID — found in App Store Connect > App > General > App Information
         XCODE_WORKSPACE: "ios-companion/CompanionApp/CompanionApp.xcworkspace"
         XCODE_SCHEME: "CompanionApp"
       xcode: latest

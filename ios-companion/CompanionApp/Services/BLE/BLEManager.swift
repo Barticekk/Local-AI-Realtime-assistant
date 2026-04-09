@@ -47,9 +47,7 @@ final class BLEManager: NSObject, ObservableObject {
     @Published private(set) var discoveredPeripherals: [CBPeripheral] = []
 
     /// The peripheral the app is currently connected to (nil = disconnected).
-    @Published private(set) var connectedPeripheral: CBPeripheral?
-
-    // ── Raw data passthrough for the command pipeline ────────────────────────
+    @Published private(set) var connectedPeripheral: CBPeripheral?    // ── Raw data passthrough for the command pipeline ────────────────────────
 
     /// Emits raw Data blobs received from the glasses characteristic.
     /// Subscribe in AIBackendClient or CommandRouter to process commands.
@@ -131,7 +129,7 @@ extension BLEManager: CBCentralManagerDelegate {
                 isReady = false
                 isScanning = false
             case .unauthorized:
-                bluetoothStateDescription = "Not authorised"
+                bluetoothStateDescription = "Not authorized"
                 isReady = false
             case .unsupported:
                 bluetoothStateDescription = "Unsupported"

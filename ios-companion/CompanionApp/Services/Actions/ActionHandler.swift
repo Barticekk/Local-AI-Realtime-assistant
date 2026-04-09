@@ -45,8 +45,7 @@ final class ActionHandler {
     ///   If a name is provided you must first resolve it to a number via
     ///   the Contacts framework (requires CNContactStore authorisation).
     ///   TODO: Add contact lookup via Contacts.framework when ready.
-    func initiateCall(target: String?) {
-        guard let rawTarget = target, !rawTarget.isEmpty else {
+    func initiateCall(target: String?) {        guard let rawTarget = target, !rawTarget.isEmpty else {
             print("[ActionHandler] initiateCall: no target provided")
             return
         }
