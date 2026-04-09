@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Info.plist for CompanionApp (iOS Companion)
+  Bundle ID: com.barticekk.localairealtimeassistant.companion
+  Minimum deployment target: iOS 16.0
+
+  Permission usage descriptions
+  ──────────────────────────────
+  Update each NSUsageDescription string with a user-facing explanation that
+  clearly states WHY the app needs the permission.  App Store review requires
+  accurate, specific descriptions.
+
+  Background modes
+  ─────────────────
+  Only enable a UIBackgroundModes entry if you actively use that capability.
+  Enabling modes you don't use is a common App Store rejection reason.
+  The two modes below are commented out by default — uncomment only what you need.
+-->
+<plist version="1.0">
+<dict>
+
+    <!-- ── App identity ──────────────────────────────────────────────── -->
+    <key>CFBundleIdentifier</key>
+    <string>com.barticekk.localairealtimeassistant.companion</string>
+
+    <key>CFBundleName</key>
+    <string>Companion</string>
+
+    <key>CFBundleDisplayName</key>
+    <string>AI Glasses Companion</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+
+    <key>MinimumOSVersion</key>
+    <string>16.0</string>
+
+    <!-- ── Supported orientations ────────────────────────────────────── -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- ── Permission usage descriptions ────────────────────────────── -->
+
+    <!--
+      Bluetooth (REQUIRED for BLE glasses connectivity).
+      Describe clearly why you need Bluetooth — e.g. to communicate with the
+      DIY AI glasses hardware over Bluetooth Low Energy.
+    -->
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>This app uses Bluetooth to connect to your AI glasses and receive commands.</string>
+
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>This app uses Bluetooth to connect to your AI glasses and receive commands.</string>
+
+    <!--
+      Microphone — uncomment if you add voice capture for on-device wake-word
+      or raw audio streaming to the AI backend.
+    -->
+    <!-- <key>NSMicrophoneUsageDescription</key> -->
+    <!-- <string>This app uses the microphone to capture voice commands from you or the glasses.</string> -->
+
+    <!--
+      Contacts — uncomment if you add contact name resolution for phone calls.
+      Requires CNContactStore authorisation.
+    -->
+    <!-- <key>NSContactsUsageDescription</key> -->
+    <!-- <string>This app accesses your contacts to resolve contact names into phone numbers for hands-free calling.</string> -->
+
+    <!-- ── Background execution modes ─────────────────────────────────
+         Uncomment ONLY the modes you actually implement.
+         Unused background modes cause App Store rejections.
+         bluetooth-central: enables BLE reconnection while backgrounded.
+         audio: required for AVAudioSession microphone in background.
+    ──────────────────────────────────────────────────────────────────── -->
+    <!--
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>bluetooth-central</string>
+        <string>audio</string>
+    </array>
+    -->
+
+    <!-- ── Main SwiftUI entry point ──────────────────────────────────── -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+    </dict>
+
+</dict>
+</plist>
